@@ -1,6 +1,16 @@
 CNN_Stuff/
 lime-master/
+<<<<<<< HEAD
+0_own_CNN/data/
+<<<<<<< HEAD
+3_other_stuff/
+*.h5
+=======
 mushroom_img/data
 mushroom_img/mushroomworld.csv
 tutorials/
 mushroom_img/test.py
+>>>>>>> parent of 2a0fe27... init
+=======
+3_other_stuff/
+>>>>>>> parent of 31899ab... init
