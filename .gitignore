@@ -1,6 +1,6 @@
 CNN_Stuff/
 lime-master/
-0_own_CNN/data/
+data/
 3_other_stuff/
 *.h5
 mushroom_img/data
