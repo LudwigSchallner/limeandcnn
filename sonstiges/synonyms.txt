@@ -1,0 +1,126 @@
+Agaricus arvensis:
+Agaricus arvensis
+Agaricus fissuratus
+
+Amanita muscaria:
+Amanita muscaria
+Amanita muscaria var. muscaria
+
+Armillaria mellea:
+Armillaria mellea
+Armillariella mellea
+
+Boletus badius:
+Boletus badius
+Imleria badia
+
+Boletus satanas:
+Boletus satanas
+Rubroboletus satanas
+
+Boletus subtomentosus:
+Boletus subtomentosus
+Xerocomus subtomentosus
+
+Bovista plumbea:
+Bovista plumbea
+Calvatia purpurea
+
+Calvatia excipuliformis:
+Calvatia excipuliformis
+Lycoperdon excipuliforme
+
+Clitocybe gibba:
+Clitocybe gibba
+Infundibulicybe gibba
+
+Cortinarius semisanguineus:
+Cortinarius semisanguineus
+Dermocybe semisanguinea
+
+Entoloma vernum:
+Entoloma vernum
+Nolanea verna
+
+Galerina marginata:
+Galerina autumnalis
+Galerina marginata
+Galerina unicolor
+
+Hydnum repandum:
+Dentinum repandum
+Hydnum repandum
+
+Hygrophoropsis aurantiaca:
+Hygrophoropsis aurantiaca
+Hygrophoropsis aurantiaca var. pallida
+
+Hypholoma capnoides:
+Hypholoma capnoides
+Naematoloma capnoides
+
+Hypholoma fasciculare:
+Hypholoma fasciculare
+Hypholoma fasciculare var. fasciculare
+
+Hypholoma marginatum:
+Hypholoma dispersum
+Hypholoma marginatum
+
+Lactarius helvus:
+Lactarius aquifluus
+Lactarius helvus
+
+Lactarius rufus:
+Lactarius rufus
+Lactarius rufus var. parvus
+
+Lactarius turpis:
+Lactarius necator
+Lactarius turpis
+
+Lactarius volemus:
+Lactarius volemus
+Lactifluus volemus
+
+Leccinum aurantiacum:
+Leccinum aurantiacum
+Leccinum quercinum
+Leccinum rufum
+
+Leccinum scabrum:
+Leccinum chalybaeum
+Leccinum oxydabile
+Leccinum scabrum
+
+Lepista nuda:
+Clitocybe nuda
+Lepista nuda
+
+Lycoperdon nigrescens:
+Lycoperdon foetidum
+Lycoperdon nigrescens
+
+Lycoperdon pyriforme:
+Lycoperdon pyriforme
+Morganella pyriformis
+
+Mycena galericulata:
+Mycena galericulata
+Mycena galericulata var. albida
+
+Pholiota alnicola:
+Flammula alnicola
+Pholiota alnicola
+
+Polyporus squamosus:
+Cerioporus squamosus
+Polyporus squamosus
+
+Suillus grevillei:
+Suillus grevillei
+Suillus grevillei var. grevillei
+
+Tricholoma focale:
+Tricholoma focale
+Tricholoma zelleri
