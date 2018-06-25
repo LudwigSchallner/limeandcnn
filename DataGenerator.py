@@ -16,10 +16,8 @@ datagen = ImageDataGenerator(
 #for each img
 for j in range(len(dir_list)):
     count_of_files = len([name for name in os.listdir(dir_list[j]) if os.path.isfile(os.path.join(dir_list[j], name))])
-    file_mul = 1000 - count_of_files
-    print(file_mul)
-    file_mul = file_mul / count_of_files
-    print(file_mul)
+    file_mul = 1000 - count_of_files # 400 = 1000 - 600
+    file_mul = file_mul / count_of_files # 0.66 = 400/600
     for filename in os.listdir(dir_list[j]):
         count_of_filesandnews = len([name for name in os.listdir(dir_list[j]) if os.path.isfile(os.path.join(dir_list[j], name))])
         saved_as = filename.replace(".jpg","")
