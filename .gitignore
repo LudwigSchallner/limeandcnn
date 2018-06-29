@@ -1,4 +1,5 @@
 *.h5
 *.hdf5
-/data/
+/data/BackUP/
+/data/mushrooms/
 /.ipynb_checkpoints/
