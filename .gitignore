@@ -1,4 +1,4 @@
 *.h5
 *.hdf5
-/data/BackUP/
-.ipynb_checkpoints
+/data/
+/.ipynb_checkpoints/
