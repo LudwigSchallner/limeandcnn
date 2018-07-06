@@ -2,7 +2,7 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 import os
 
 
-dir_list = [x[0] for x in os.walk('./data/mushrooms_filled/train/')][1:]
+dir_list = [x[0] for x in os.walk('./data/mushrooms24/train/')][1:]
 datagen = ImageDataGenerator(
         rescale=1./255,
         rotation_range=40,
@@ -17,7 +17,7 @@ datagen = ImageDataGenerator(
 for j in range(len(dir_list)):
     count_of_files = len([name for name in os.listdir(dir_list[j]) if os.path.isfile(os.path.join(dir_list[j], name))])
     file_mul = 1000 - count_of_files # 400 = 1000 - 600
-    file_mul = file_mul / count_of_files # 0.66 = 400/600
+    file_mul = round(file_mul / count_of_files,0) # 0.66 = 400/600
     for filename in os.listdir(dir_list[j]):
         count_of_filesandnews = len([name for name in os.listdir(dir_list[j]) if os.path.isfile(os.path.join(dir_list[j], name))])
         saved_as = filename.replace(".jpg","")
@@ -33,5 +33,5 @@ for j in range(len(dir_list)):
         for batch in datagen.flow(x, batch_size=1,
                                   save_to_dir=dir_list[j], save_prefix=saved_as, save_format='jpeg'):
             i += 1
-            if i > min(file_mul, 20): #i>(1000-anzahl an files im dir)
+            if i > min(file_mul, 2): #i>(1000-anzahl an files im dir)
                 break  # otherwise the generator would loop indefinitely

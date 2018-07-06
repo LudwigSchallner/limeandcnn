@@ -1,9 +1,8 @@
 import shutil
 import os
-import csv
 
 #synonym_list = list(csv.reader(open('mushroom_synonyms.csv', 'r')))
-path_list = list([x[0] for x in os.walk('../data/mushrooms_filled/train/')][1:])
+path_list = list([x[0] for x in os.walk('../data/mushrooms_cleared/train/')][1:])
 for i in range(len(path_list)):
     dest = path_list[i].replace("train","test")+'/'
     source = path_list[i]+'/'
