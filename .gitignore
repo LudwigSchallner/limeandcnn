@@ -2,3 +2,4 @@
 *.hdf5
 /data/*
 /.ipynb_checkpoints/
+/logs/*
