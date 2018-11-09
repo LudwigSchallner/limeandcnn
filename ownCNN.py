@@ -22,8 +22,8 @@ if sys.argv[1] == "catdog":
     IMG_SIZE = 100
     CHANNEL = 3
     BATCH_SIZE = 32
-    TRAIN_SIZE = 22498
-    TEST_SIZE = 2502
+    TRAIN_SIZE = 22451
+    TEST_SIZE = 2495
     STEPS_EPOCH_TRAIN = int(TRAIN_SIZE / BATCH_SIZE)
     STEPS_EPOCH_TEST = int(TEST_SIZE / BATCH_SIZE)
 elif sys.argv[1] == "flowers":
@@ -101,7 +101,8 @@ for dense_layer in dense_layers:
             model.fit_generator(training_set,
                     epochs=10,
                     steps_per_epoch=STEPS_EPOCH_TRAIN,
-                    shuffle=True,
+                    validation_data=val_set,
+                    validation_steps=STEPS_EPOCH_TEST,
                     callbacks=[tensorboard]
                    )
-model.save(NAME+".h5")
+model.save(os.path.join('trainedModels','catdog',NAME+".h5"))

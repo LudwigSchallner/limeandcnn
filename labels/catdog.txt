@@ -1,2 +1,2 @@
-cat
-dog
+Cat
+Dog
