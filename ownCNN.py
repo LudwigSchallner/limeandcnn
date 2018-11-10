@@ -8,9 +8,9 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import LeakyReLU, ELU 
 from keras.layers import Conv2D, MaxPooling2D
-from keras.callbacks import TensorBoard
+from keras.callbacks import TensorBoard, ModelCheckpoint
 import pickle
-import time
+from datetime import datetime
 
 
 print("Tensorflow Version: "+tf.__version__)
@@ -19,7 +19,7 @@ print("Keras Version: "+keras.__version__)
 
 if sys.argv[1] == "catdog":
     CATEGORIES = ["Cat","Dog"]
-    IMG_SIZE = 100
+    IMG_SIZE = 299
     CHANNEL = 3
     BATCH_SIZE = 32
     TRAIN_SIZE = 22451
@@ -38,9 +38,7 @@ elif sys.argv[1] == "flowers":
 else:
     raise NameError("Dataset "+sys.argv[1]+" not supported!")
 
-NAME = sys.argv[1]+" {}".format(int(time.time()))
 
-tensorboard = TensorBoard(log_dir='logs/{}'.format(NAME))
 
 # pickle_in = open(os.path.join('.',"data",sys.argv[1],"X_"+sys.argv[1]+".pickle"),"rb")
 # X = pickle.load(pickle_in)
@@ -69,9 +67,20 @@ dense_layers = [0]
 for dense_layer in dense_layers:
     for layer_size in layer_sizes:
         for conv_layer in conv_layers:
-            NAME = "{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, int(time.time()))
+            START_TIME = str(datetime.now().strftime("%d-%m-%y %H%M"))
+            NAME = "{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, START_TIME)
+            #NAME = sys.argv[1]+" {}".format(START_TIME)
+            tensorboard = TensorBoard(log_dir='logs/{}'.format(NAME))
+            modelcheckpoint = ModelCheckpoint('./ModelCheckpoints/'+sys.argv[1]+'/'+START_TIME+
+                                              '__weights-{epoch:02d}-val_acc{val_acc:.2f}--train_acc{acc:.2f}.hdf5',
+                                              monitor='val_loss',
+                                              verbose=1,
+                                              save_best_only=False,
+                                              save_weights_only=False,
+                                              mode='auto',
+                                              period=1)
             print(NAME)
-
+            
             model = Sequential()
 
             model.add(Conv2D(layer_size, (3, 3), input_shape=(IMG_SIZE,IMG_SIZE,CHANNEL)))
@@ -98,11 +107,13 @@ for dense_layer in dense_layers:
                     #   epochs=10,
                     #   validation_split=0.3,
                     #   callbacks=[tensorboard])
+            model.load_weights('./ModelCheckpoints/catdog/10-11-18 1134__weights-19-val_acc0.88--train_acc0.89.hdf5')
             model.fit_generator(training_set,
-                    epochs=10,
+                    epochs=19,
+                    #initial_epoch=19,
                     steps_per_epoch=STEPS_EPOCH_TRAIN,
                     validation_data=val_set,
                     validation_steps=STEPS_EPOCH_TEST,
-                    callbacks=[tensorboard]
+                    callbacks=[tensorboard,modelcheckpoint]
                    )
 model.save(os.path.join('trainedModels','catdog',NAME+".h5"))
