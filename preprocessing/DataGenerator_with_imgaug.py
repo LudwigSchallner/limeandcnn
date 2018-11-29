@@ -21,7 +21,7 @@ name_of_files = []
 for f1 in files:
     img = Image.open(f1)
     file_name = f1.rsplit('/',1)[1].replace(".png","")
-    img.save("./datagen/"+sys.argv[1]+"/"+file_name+".png")
+    img.save("./data/datagen/"+sys.argv[1]+"/"+file_name+".png")
     images.append(np.asarray(img,dtype=np.uint8))
     name_of_files.append(file_name)
     
@@ -83,13 +83,12 @@ seq = iaa.Sequential(
     random_order=True
 )
 
-
-
+for i in range(len(images)):
+    #images_aug = seq.augment_images(images)
     for count in range(17):
-        images_aug = seq.augment_images(images)
-        for i in range(len(images_aug)):
-            #ia.imshow(images_aug[x])
-            im = Image.fromarray(images_aug[i])
-            im.save("./datagen/"+sys.argv[1]+"/"+name_of_files[i]+"_"+str(count)+".png")
+        images_aug = seq.augment_image(images[i])
+        #ia.imshow(images_aug[x])
+        im = Image.fromarray(images_aug)#[i])
+        im.save("./data/datagen/"+sys.argv[1]+"/"+name_of_files[i]+"_"+str(count)+".png")
 
 print("--- %s seconds ---" % (time.time() - start_time))
