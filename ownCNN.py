@@ -35,6 +35,15 @@ elif sys.argv[1] == "flowers":
     TEST_SIZE = 670
     STEPS_EPOCH_TRAIN = int(TRAIN_SIZE / BATCH_SIZE)
     STEPS_EPOCH_TEST = int(TEST_SIZE / BATCH_SIZE)
+elif sys.argv[1] == "tabak":
+    CATEGORIES = ["Gestresst","Gesund"]
+    IMG_SIZE = 299
+    CHANNEL = 3
+    BATCH_SIZE = 32
+    TRAIN_SIZE = 2610
+    TEST_SIZE = 210
+    STEPS_EPOCH_TRAIN = int(TRAIN_SIZE / BATCH_SIZE)
+    STEPS_EPOCH_TEST = int(TEST_SIZE / BATCH_SIZE)
 else:
     raise NameError("Dataset "+sys.argv[1]+" not supported!")
 
@@ -47,7 +56,7 @@ else:
 # y = pickle.load(pickle_in)
 
 # X = X/255.0
-train_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range = 0.2, horizontal_flip=True)
+train_datagen = ImageDataGenerator(rescale=1./255)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set= train_datagen.flow_from_directory(os.path.join('.',"data",sys.argv[1],'train'),
                                                 target_size = (IMG_SIZE, IMG_SIZE),
@@ -109,7 +118,7 @@ for dense_layer in dense_layers:
                     #   callbacks=[tensorboard])
             model.load_weights('./ModelCheckpoints/catdog/10-11-18 1134__weights-19-val_acc0.88--train_acc0.89.hdf5')
             model.fit_generator(training_set,
-                    epochs=19,
+                    epochs=10,
                     #initial_epoch=19,
                     steps_per_epoch=STEPS_EPOCH_TRAIN,
                     validation_data=val_set,
