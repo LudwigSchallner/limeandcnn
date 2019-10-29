@@ -1,0 +1,54 @@
+Epoch 1/50
+ - 56s - loss: 0.3582 - acc: 0.8640 - val_loss: 0.1569 - val_acc: 0.9390
+Epoch 2/50
+ - 50s - loss: 0.1771 - acc: 0.9402 - val_loss: 0.1342 - val_acc: 0.9523
+Epoch 3/50
+ - 49s - loss: 0.1532 - acc: 0.9460 - val_loss: 0.1243 - val_acc: 0.9570
+Epoch 4/50
+ - 51s - loss: 0.1372 - acc: 0.9520 - val_loss: 0.1165 - val_acc: 0.9585
+Epoch 5/50
+ - 52s - loss: 0.1250 - acc: 0.9555 - val_loss: 0.1123 - val_acc: 0.9604
+Epoch 6/50
+ - 49s - loss: 0.1215 - acc: 0.9571 - val_loss: 0.1019 - val_acc: 0.9637
+Epoch 7/50
+ - 49s - loss: 0.1120 - acc: 0.9605 - val_loss: 0.1139 - val_acc: 0.9596
+Epoch 8/50
+ - 49s - loss: 0.1089 - acc: 0.9621 - val_loss: 0.1038 - val_acc: 0.9611
+Epoch 9/50
+ - 49s - loss: 0.1015 - acc: 0.9634 - val_loss: 0.1062 - val_acc: 0.9622
+Epoch 10/50
+ - 49s - loss: 0.0992 - acc: 0.9641 - val_loss: 0.1046 - val_acc: 0.9618
+Epoch 11/50
+ - 49s - loss: 0.0951 - acc: 0.9642 - val_loss: 0.1067 - val_acc: 0.9607
+Epoch 12/50
+ - 49s - loss: 0.0885 - acc: 0.9679 - val_loss: 0.0979 - val_acc: 0.9648
+Epoch 13/50
+ - 49s - loss: 0.0888 - acc: 0.9683 - val_loss: 0.0991 - val_acc: 0.9644
+Epoch 14/50
+ - 49s - loss: 0.0828 - acc: 0.9691 - val_loss: 0.0859 - val_acc: 0.9681
+Epoch 15/50
+ - 49s - loss: 0.0841 - acc: 0.9695 - val_loss: 0.1100 - val_acc: 0.9633
+Epoch 16/50
+ - 49s - loss: 0.0794 - acc: 0.9700 - val_loss: 0.1020 - val_acc: 0.9629
+Epoch 17/50
+ - 49s - loss: 0.0757 - acc: 0.9714 - val_loss: 0.0920 - val_acc: 0.9655
+Epoch 18/50
+ - 49s - loss: 0.0712 - acc: 0.9743 - val_loss: 0.1078 - val_acc: 0.9651
+Epoch 19/50
+ - 49s - loss: 0.0727 - acc: 0.9730 - val_loss: 0.1063 - val_acc: 0.9648
+Epoch 20/50
+ - 49s - loss: 0.0701 - acc: 0.9736 - val_loss: 0.1037 - val_acc: 0.9655
+Epoch 21/50
+ - 49s - loss: 0.0671 - acc: 0.9746 - val_loss: 0.1039 - val_acc: 0.9622
+Epoch 22/50
+ - 49s - loss: 0.0643 - acc: 0.9752 - val_loss: 0.1016 - val_acc: 0.9651
+Epoch 23/50
+ - 49s - loss: 0.0619 - acc: 0.9769 - val_loss: 0.1015 - val_acc: 0.9655
+Epoch 24/50
+ - 49s - loss: 0.0572 - acc: 0.9773 - val_loss: 0.1063 - val_acc: 0.9673
+Restoring model weights from the end of the best epoch
+Epoch 00024: early stopping
+['loss', 'acc']
+[0.10685405066792403, 0.9637155297532656]
+['loss', 'acc']
+[0.0020142504302886584, 1.0]

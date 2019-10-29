@@ -1,0 +1,44 @@
+Epoch 1/50
+ - 33s - loss: 0.9513 - acc: 0.7937
+Epoch 2/50
+ - 29s - loss: 0.4327 - acc: 0.8980
+Epoch 3/50
+ - 29s - loss: 0.3507 - acc: 0.9233
+Epoch 4/50
+ - 30s - loss: 0.2804 - acc: 0.9421
+Epoch 5/50
+ - 30s - loss: 0.3569 - acc: 0.9293
+Epoch 6/50
+ - 30s - loss: 0.3000 - acc: 0.9318
+Epoch 7/50
+ - 31s - loss: 0.3145 - acc: 0.9459
+Epoch 8/50
+ - 29s - loss: 0.3024 - acc: 0.9246
+Epoch 9/50
+ - 32s - loss: 0.2262 - acc: 0.9553
+Epoch 10/50
+ - 31s - loss: 0.1430 - acc: 0.9640
+Epoch 11/50
+ - 33s - loss: 0.2266 - acc: 0.9437
+Epoch 12/50
+ - 33s - loss: 0.3505 - acc: 0.9378
+Epoch 13/50
+ - 33s - loss: 0.2206 - acc: 0.9584
+Epoch 14/50
+ - 30s - loss: 0.2036 - acc: 0.9544
+Epoch 15/50
+ - 29s - loss: 0.2213 - acc: 0.9562
+Epoch 16/50
+ - 29s - loss: 0.1777 - acc: 0.9577
+Epoch 17/50
+ - 29s - loss: 0.2617 - acc: 0.9568
+Epoch 18/50
+ - 29s - loss: 0.1893 - acc: 0.9593
+Epoch 19/50
+ - 29s - loss: 0.2855 - acc: 0.9490
+Epoch 20/50
+ - 29s - loss: 0.2078 - acc: 0.9459
+Restoring model weights from the end of the best epoch
+Epoch 00020: early stopping
+['loss', 'acc']
+[0.7524370948473612, 0.5]
